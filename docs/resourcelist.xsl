@@ -2,8 +2,7 @@
 <xsl:stylesheet version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
   xmlns:s="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:rs="http://www.openarchives.org/rs/terms/"
-  >
+  xmlns:rs="http://www.openarchives.org/rs/terms/">
 
   <xsl:output method="html" encoding="UTF-8"/>
 
@@ -18,7 +17,7 @@
         <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
           <div class="container flex flex-wrap items-center justify-between mx-auto">
             <a href="./capabilitylist.xml" class="flex items-center">
-                <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ResourceSync</span>
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">ResourceSync</span>
             </a>
             <div class="hidden w-full md:block md:w-auto" id="navbar-default">
               <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
@@ -33,12 +32,15 @@
           </div>
         </nav>
         <div class="container mx-auto my-4">
-          <h1 class="text-4xl font-bold text-center mb-4"><xsl:value-of select="rs:md/@capability"/></h1>
+          <h1 class="text-4xl font-bold text-center mb-4">
+            <xsl:value-of select="rs:md/@capability"/>
+          </h1>
           <table class="table-auto">
             <thead>
               <tr>
                 <th class="px-4 py-2">loc</th>
                 <th class="px-4 py-2">lastmod</th>
+                <th class="px-4 py-2">capability</th>
               </tr>
             </thead>
             <tbody>
@@ -59,6 +61,9 @@
       </td>
       <td class="border px-4 py-2">
         <xsl:value-of select="s:lastmod"/>
+      </td>
+      <td class="border px-4 py-2">
+        <xsl:value-of select="rs:md/@capability"/>
       </td>
     </tr>
   </xsl:template>

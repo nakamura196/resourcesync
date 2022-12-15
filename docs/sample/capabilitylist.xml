@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-stylesheet href="../resourcelist.xsl" type="text/xsl" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:rs="http://www.openarchives.org/rs/terms/">
+<rs:ln href="https://www.hi.u-tokyo.ac.jp/di/resource/.well-known/resourcesync" rel="up" />
+<rs:md capability="capabilitylist" />
+<url><loc>https://www.hi.u-tokyo.ac.jp/di/resource/resourcesync/resourcelist-index.xml</loc><rs:md capability="resourcelist" /></url>
+<!-- <url><loc>https://cir.nii.ac.jp/resourcesync/changelist-index.xml</loc><rs:md capability="changelist" /></url> -->
+</urlset>
